@@ -1,0 +1,86 @@
+body {
+    font-family: 'Montserrat', sans-serif; /* Aplicar la fuente Montserrat a todo el cuerpo del documento */
+    margin: 0;
+    padding: 0;
+}
+
+#map {
+    height: 100vh;
+    width: 100%;
+}
+
+#filter-bar {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background: rgba(255, 255, 255, 0.6);
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+}
+
+#remove-filters {
+    background-color: #d4c19c; /* Color personalizado */
+    color: white; /* Texto blanco */
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 20px; /* Espacio superior */
+    margin-left: 45px;
+}
+
+#remove-filters:hover {
+    background-color: #ad6d32; /* Color más oscuro al pasar el ratón */
+}
+
+.leaflet-top.leaflet-left {
+    left: initial; /* Reiniciar el valor por defecto */
+    right: 10px; /* Ajustar la distancia desde el borde derecho */
+    top: 10px; /* Ajustar la distancia desde el borde superior */
+}
+
+.leaflet-control-zoom {
+    right: 8.5px; /* Ajustar la distancia desde el borde derecho */
+    top: 50px; /* Ajustar la distancia desde el borde superior */
+}
+
+/* Posicionar el control de geocodificación */
+.leaflet-control-geocoder {
+    position: absolute;
+    right: 8.5px; /* Ajustar la distancia desde el borde derecho */
+    top: 130px; /* Ajustar la distancia desde el borde superior */
+}
+
+#filter-bar img {
+    display: block;
+    margin-bottom: 10px;
+    margin-left: 15px;
+    width: 150px; /* Ajusta el tamaño de la imagen según sea necesario */
+    height: auto; /* Mantiene la proporción de la imagen */
+}
+
+#filter-bar label {
+    display: block;
+    margin-bottom: 2px;
+}
+
+#filter-bar h4 {
+    text-align: center;
+    margin-bottom: 5px;
+    color: #ad6d32;
+}
+
+/* Estilo base para los checkboxes */
+input[type="checkbox"] {
+    accent-color: #7030a0; /* Cambia el color del checkbox */
+    margin-right: 15px; /* Espacio entre el checkbox y la etiqueta */
+    margin-left: 15px;
+}
+
+/* Opcional: Estilo adicional para cambiar el aspecto cuando el checkbox está marcado */
+input[type="checkbox"]:checked {
+    accent-color: #621132; /* Color cuando está marcado */
+}

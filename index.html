@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mapa COPLADE Pobreza</title>
+    
+    <!-- Leaflet CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+    
+    <!-- Leaflet Control Geocoder CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet-control-geocoder/dist/Control.Geocoder.css" />
+    
+    <!-- Tu CSS personalizado -->
+    <link rel="stylesheet" href="styles.css" />
+    
+    <!-- Google Fonts -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap">
+    
+    <!-- Leaflet Control Layers Base CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet-control-layers-base@1.1.0/dist/leaflet-control-layers-base.min.css">
+</head>
+<body>
+    <div id="map"></div>
+    <div id="filter-bar">
+        <img src="PNG/LOGO COPLADE BC.png" alt="Logo COPLADE" id="logo">
+        <!-- Filtros de Niveles de Pobreza -->
+        <div>
+            <h4>Rangos de Pobreza</h4>
+            <label>
+                <input type="checkbox" value="0% - 20%" class="filter-pobreza">
+                0% - 20%
+            </label>
+            <label>
+                <input type="checkbox" value="20% - 40%" class="filter-pobreza">
+                20% - 40%
+            </label>
+            <label>
+                <input type="checkbox" value="40% - 60%" class="filter-pobreza">
+                40% - 60%
+            </label>
+            <label>
+                <input type="checkbox" value="60% - 80%" class="filter-pobreza">
+                60% - 80%
+            </label>
+        </div>
+        <!-- Filtros de Municipios -->
+        <div>
+            <h4>Municipios</h4>
+            <label>
+                <input type="checkbox" value="Ensenada" class="filter-municipio">
+                Ensenada
+            </label>
+            <label>
+                <input type="checkbox" value="Mexicali" class="filter-municipio">
+                Mexicali
+            </label>
+            <label>
+                <input type="checkbox" value="Tecate" class="filter-municipio">
+                Tecate
+            </label>
+            <label>
+                <input type="checkbox" value="Tijuana" class="filter-municipio">
+                Tijuana
+            </label>
+            <label>
+                <input type="checkbox" value="Playas de Rosarito" class="filter-municipio">
+                Playas de Rosarito
+            </label>
+            <label>
+                <input type="checkbox" value="San Quintín" class="filter-municipio">
+                San Quintín
+            </label>
+            <label>
+                <input type="checkbox" value="San Felipe" class="filter-municipio">
+                San Felipe
+            </label>
+            <button id="remove-filters">Quitar filtros</button>
+        </div>
+    </div>
+    
+    <!-- Leaflet JS -->
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    
+    <!-- Leaflet Control Geocoder JS -->
+    <script src="https://unpkg.com/leaflet-control-geocoder/dist/Control.Geocoder.js"></script>
+    
+    <!-- Tu JS personalizado -->
+    <script src="script.js"></script>
+</body>
+</html>
